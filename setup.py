@@ -16,8 +16,9 @@ setup(
     description="An intelligent image captioning tool using Azure OpenAI's GPT-4V model",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/ai-image-captioner",
-    packages=find_packages(),
+    url="https://github.com/CroissanStudioDev/ai-image-captioner",
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -32,7 +33,7 @@ setup(
     install_requires=requirements,
     entry_points={
         "console_scripts": [
-            "ai-image-captioner=image_captioner:main",
+            "ai-image-captioner=ai_image_captioner.cli:main",
         ],
     },
 )
