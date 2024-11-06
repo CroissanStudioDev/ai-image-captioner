@@ -1,5 +1,5 @@
 openai>=1.54.2
-pillow>=11.0.0
+pillow>=10.4.0
 python-dotenv>=1.0.1
 tqdm>=4.67.0
 black>=24.1.0
