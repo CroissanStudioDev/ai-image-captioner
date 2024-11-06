@@ -9,19 +9,6 @@
 
 An intelligent image captioning tool using Azure OpenAI's GPT-4V model, specifically designed for training diffusion models. This tool preprocesses images and generates high-quality captions optimized for AI training.
 
-## 📋 Table of Contents
-
-- [About](#🎯-About)
-- [Features](#features-section)
-- [Prerequisites](#prerequisites-section)
-- [Installation](#installation-section)
-- [Usage](#usage-section)
-- [Development](#development-section)
-- [Troubleshooting](#troubleshooting-section)
-- [Contributing](#contributing-section)
-- [License](#license-section)
-- [Support](#support-section)
-
 ## 🎯 About
 
 **AI Image Captioner** is a Python library designed to provide comprehensive support for image captioning using Azure OpenAI's GPT-4V model. It adheres to high standards of:
