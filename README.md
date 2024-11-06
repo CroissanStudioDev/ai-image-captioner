@@ -202,7 +202,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Azure OpenAI team for providing the GPT-4V API
 - Inspired by [oCaption](https://github.com/ghostofpokemon/oCaption)
-- Contributors to the Python Pillow library
 
 ## Support
 
