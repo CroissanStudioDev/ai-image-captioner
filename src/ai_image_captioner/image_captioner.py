@@ -46,7 +46,10 @@ class ImageCaptioner:
             "5. Make no reference to specific franchises\n"
             "6. Focus on main subjects and actions\n"
             "7. Detect gender and describe accordingly\n"
-            "8. DO NOT end with a period"
+            "8. DO NOT end with a period\n"
+            "9. ALWAYS IDENTIFY THE GENDER OF THE MAIN SUBJECT\n"
+            "10. DO NOT mention background or environment\n"
+            "11. DO NOT use word 'character'\n"
         )
 
     def get_caption(
