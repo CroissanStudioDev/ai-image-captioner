@@ -18,7 +18,7 @@ An intelligent image captioning tool using Azure OpenAI's GPT-4V model, specific
 - **Maintainability**: Clear structure and organization
 - **Reliability**: Robust error handling and retry mechanisms
 
-## ✨ Features {#features-section}
+## ✨ Features
 
 ### Image Preprocessing
 
@@ -51,13 +51,13 @@ An intelligent image captioning tool using Azure OpenAI's GPT-4V model, specific
 - CSV export
 - Customizable prefix/suffix
 
-## 📦 Prerequisites {#prerequisites-section}
+## 📦 Prerequisites
 
 - Python 3.8+
 - Azure OpenAI API access with GPT-4V deployment
 - Required Python packages (see requirements.txt)
 
-## 🚀 Installation {#installation-section}
+## 🚀 Installation
 
 1. Clone the repository:
 
@@ -93,7 +93,7 @@ AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
 AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name
 ```
 
-## 💡 Usage {#usage-section}
+## 💡 Usage
 
 ### Basic Usage
 
@@ -136,7 +136,7 @@ man in blue shirt and jeans standing with arms crossed
 young girl holding a red balloon, wearing a white dress
 ```
 
-## 🛠️ Development {#development-section}
+## 🛠️ Development
 
 ### Project Structure
 
@@ -169,7 +169,7 @@ black src/ai_image_captioner
 flake8 src/ai_image_captioner
 ```
 
-## ❗ Troubleshooting {#troubleshooting-section}
+## ❗ Troubleshooting
 
 ### Common Issues
 
@@ -187,15 +187,15 @@ which python  # Should point to .venv/bin/python
 
 3. **API Errors**: Check `.env` configuration
 
-## 🤝 Contributing {#contributing-section}
+## 🤝 Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 📄 License {#license-section}
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 💬 Support {#support-section}
+## 💬 Support
 
 For support:
 
