@@ -1,52 +1,85 @@
 # AI Image Captioner
 
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/CroissanStudioDev/ai-image-captioner)
+![Code Style](https://img.shields.io/badge/code%20style-black-black)
+
+⭐ Star us on GitHub — it motivates us a lot!
+
 An intelligent image captioning tool using Azure OpenAI's GPT-4V model, specifically designed for training diffusion models. This tool preprocesses images and generates high-quality captions optimized for AI training.
 
-## Features
+## 📋 Table of Contents
 
-- **Image Preprocessing**
-  - Automatic resizing to 1024x1024
-  - Aspect ratio preservation with padding
-  - RGB conversion (alpha channel removal)
-  - Standardized JPEG output
-  - Sequential naming (image0.jpg, image1.jpg, etc.)
+- [About](#about-section)
+- [Features](#features-section)
+- [Prerequisites](#prerequisites-section)
+- [Installation](#installation-section)
+- [Usage](#usage-section)
+- [Development](#development-section)
+- [Troubleshooting](#troubleshooting-section)
+- [Contributing](#contributing-section)
+- [License](#license-section)
+- [Support](#support-section)
 
-- **Caption Generation**
-  - Intelligent captioning using GPT-4V
-  - Gender and attribute detection
-  - Consistent formatting
-  - No introductory phrases
-  - Focus on main subjects
-  - Comma-separated elements
+## 🎯 About {#about-section}
 
-- **Batch Processing**
-  - Multiple file format support
-  - Progress tracking
-  - Error handling
-  - Retry mechanism for API failures
+**AI Image Captioner** is a Python library designed to provide comprehensive support for image captioning using Azure OpenAI's GPT-4V model. It adheres to high standards of:
 
-- **Output Options**
-  - Individual caption files (.txt)
-  - Dataset JSON file
-  - CSV export
-  - Customizable prefix/suffix
+- **Modularity**: Different components can function independently
+- **Testability**: Improved separation of concerns
+- **Maintainability**: Clear structure and organization
+- **Reliability**: Robust error handling and retry mechanisms
 
-## Prerequisites
+## ✨ Features {#features-section}
+
+### Image Preprocessing
+
+- Automatic resizing to 1024x1024
+- Aspect ratio preservation with padding
+- RGB conversion (alpha channel removal)
+- Standardized JPEG output
+- Sequential naming (image0.jpg, image1.jpg, etc.)
+
+### Caption Generation
+
+- Intelligent captioning using GPT-4V
+- Gender and attribute detection
+- Consistent formatting
+- No introductory phrases
+- Focus on main subjects
+- Comma-separated elements
+
+### Batch Processing
+
+- Multiple file format support
+- Progress tracking
+- Error handling
+- Retry mechanism for API failures
+
+### Output Options
+
+- Individual caption files (.txt)
+- Dataset JSON file
+- CSV export
+- Customizable prefix/suffix
+
+## 📦 Prerequisites {#prerequisites-section}
 
 - Python 3.8+
 - Azure OpenAI API access with GPT-4V deployment
 - Required Python packages (see requirements.txt)
 
-## Installation
+## 🚀 Installation {#installation-section}
 
-1.Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/CroissanStudioDev/ai-image-captioner.git
 cd ai-image-captioner
 ```
 
-2.Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
 ```bash
 # Create virtual environment
@@ -59,13 +92,13 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
-3.Install the package in development mode:
+3. Install the package in development mode:
 
 ```bash
 pip install -e .
 ```
 
-4.Create a `.env` file with your Azure OpenAI credentials:
+4. Create a `.env` file with your Azure OpenAI credentials:
 
 ```ini
 AZURE_OPENAI_API_KEY=your_api_key_here
@@ -73,18 +106,14 @@ AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
 AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name
 ```
 
-## Usage
+## 💡 Usage {#usage-section}
 
 ### Basic Usage
 
 Process images with default settings:
 
 ```bash
-# Using the module
 python -m ai_image_captioner.cli --input-folder input --output-folder output
-
-# Using the installed script
-ai-image-captioner --input-folder input --output-folder output
 ```
 
 ### Advanced Usage
@@ -99,16 +128,7 @@ python -m ai_image_captioner.cli \
     --suffix "high quality"
 ```
 
-Disable JSON dataset creation:
-
-```bash
-python -m ai_image_captioner.cli \
-    --input-folder input \
-    --output-folder output \
-    --no-json
-```
-
-### Output Structure
+### Output Format
 
 ```text
 output/
@@ -121,17 +141,7 @@ output/
 └── dataset.json        # Complete dataset information
 ```
 
-### Caption Format
-
-The tool generates captions following these rules:
-
-- No introductory phrases
-- Direct descriptions
-- Comma-separated elements
-- Gender-specific descriptions
-- No ending punctuation
-
-Example captions:
+### Caption Examples
 
 ```text
 woman with pink hair wearing orange sunglasses, gray jumpsuit with orange accents
@@ -139,7 +149,7 @@ man in blue shirt and jeans standing with arms crossed
 young girl holding a red balloon, wearing a white dress
 ```
 
-## Development
+## 🛠️ Development {#development-section}
 
 ### Project Structure
 
@@ -162,50 +172,49 @@ ai-image-captioner/
 
 ### Code Style
 
-The project follows PEP 8 guidelines. Run the following checks:
+The project follows PEP 8 guidelines and uses Black for formatting:
 
 ```bash
-# Format code with black
+# Format code
 black src/ai_image_captioner
 
-# Check with flake8
+# Check style
 flake8 src/ai_image_captioner
 ```
 
-## Troubleshooting
+## ❗ Troubleshooting {#troubleshooting-section}
 
 ### Common Issues
 
-1.**ModuleNotFoundError**: Make sure you've installed the package in development mode:
+1. **ModuleNotFoundError**: Ensure proper installation:
 
 ```bash
 pip install -e .
 ```
 
-2.**Import Error**: Verify you're using the correct Python from virtual environment:
+2. **Import Error**: Verify virtual environment:
 
 ```bash
 which python  # Should point to .venv/bin/python
 ```
 
-3.**API Errors**: Check your `.env` file and Azure OpenAI credentials
+3. **API Errors**: Check `.env` configuration
 
-## Contributing
+## 🤝 Contributing {#contributing-section}
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## License
+## 📄 License {#license-section}
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- Azure OpenAI team for providing the GPT-4V API
-- Inspired by [oCaption](https://github.com/ghostofpokemon/oCaption)
-
-## Support
+## 💬 Support {#support-section}
 
 For support:
 
 - Open an issue in the [GitHub repository](https://github.com/CroissanStudioDev/ai-image-captioner/issues)
 - Contact: <serge@croissanstudio.ru>
+
+---
+
+Made with ❤️ by [Croissan Studio](https://github.com/CroissanStudioDev)
