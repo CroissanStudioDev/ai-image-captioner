@@ -39,27 +39,33 @@ An intelligent image captioning tool using Azure OpenAI's GPT-4V model, specific
 
 ## Installation
 
-1. Clone the repository:
+1.Clone the repository:
 
 ```bash
-git clone https://github.com/croissanstudio/ai-image-captioner.git
+git clone https://github.com/CroissanStudioDev/ai-image-captioner.git
 cd ai-image-captioner
 ```
 
-1. Create and activate a virtual environment:
+2.Create and activate a virtual environment:
 
 ```bash
+# Create virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Activate on Linux/macOS
+source .venv/bin/activate
+
+# Activate on Windows
+.venv\Scripts\activate
 ```
 
-1. Install dependencies:
+3.Install the package in development mode:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
-1. Create a `.env` file with your Azure OpenAI credentials:
+4.Create a `.env` file with your Azure OpenAI credentials:
 
 ```ini
 AZURE_OPENAI_API_KEY=your_api_key_here
@@ -74,7 +80,11 @@ AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name
 Process images with default settings:
 
 ```bash
+# Using the module
 python -m ai_image_captioner.cli --input-folder input --output-folder output
+
+# Using the installed script
+ai-image-captioner --input-folder input --output-folder output
 ```
 
 ### Advanced Usage
@@ -150,19 +160,35 @@ ai-image-captioner/
 └── setup.py
 ```
 
-### Running Tests
-
-```bash
-pytest
-```
-
 ### Code Style
 
-The project follows PEP 8 guidelines. Run flake8 to check:
+The project follows PEP 8 guidelines. Run the following checks:
 
 ```bash
+# Format code with black
+black src/ai_image_captioner
+
+# Check with flake8
 flake8 src/ai_image_captioner
 ```
+
+## Troubleshooting
+
+### Common Issues
+
+1.**ModuleNotFoundError**: Make sure you've installed the package in development mode:
+
+```bash
+pip install -e .
+```
+
+2.**Import Error**: Verify you're using the correct Python from virtual environment:
+
+```bash
+which python  # Should point to .venv/bin/python
+```
+
+3.**API Errors**: Check your `.env` file and Azure OpenAI credentials
 
 ## Contributing
 
@@ -180,4 +206,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For support, please open an issue in the GitHub repository or contact <serge@croissanstudio.ru>.
+For support:
+
+- Open an issue in the [GitHub repository](https://github.com/CroissanStudioDev/ai-image-captioner/issues)
+- Contact: <serge@croissanstudio.ru>
